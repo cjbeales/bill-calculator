@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bill Calculator</title>
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <div class="tips">
+      <div class="calculating">
+        <div class="loader-block">
+          <div class="loader">
+            <div class="loader-inner"></div>
+          </div>
+          <h2>Doing the math...</h2>
+        </div>
+      </div>
+      <div class="tips__container">
+        <div class="tips__form">
+          <div class="app-heading">
+            <h1>Bill Calculator</h1>
+          </div>
+          <div class="option-form">
+            <div class="field">
+              <label for="billAmount">Bill Amount:</label>
+              <input id="billAmount" type="text" placeholder="Enter your bill amount (£)" />
+            </div>
+            <div class="field">
+              <label for="serviceLevel">How was your service?</label>
+              <select id="serviceLevel" required>
+                <option selected="selected" value="" selected disabled>-- Choose an option --</option>
+                <option value="15">Amazing</option>
+                <option value="8">Good</option>
+                <option value="3">Average</option>
+                <option value="1">Below Average</option>
+                <option value="0">Bad</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="people">Number of guests</label>
+              <input id="people" type="number" min="1" max="20" placeholder="No. of people" />
+            </div>
+            <button id="calculateBtn">Calculate</button>
+            <div id="errorText">
+            </div>
+          </div>
+          <div id="tipBox"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type=" text/javascript" src="./assets/js/app.js"></script>
+</body>
+
+</html>
